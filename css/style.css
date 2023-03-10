@@ -1,0 +1,281 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --colorBlue: rgb(0, 0, 87);
+  --colorWhite: rgb(240, 240, 240);
+}
+
+a {
+  text-decoration: none;
+  color: var(--colorWhite);
+}
+
+button {
+  background-color: var(--colorBlue);
+}
+
+li {
+  list-style-type: none;
+}
+
+.web-page {
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--colorBlue);
+  padding: 16px;
+}
+
+.navbar .title-page {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  padding: 8px;
+  color: var(--colorWhite);
+}
+
+.navbar button {
+  border: none;
+  display: none;
+}
+
+.navbar button i {
+  font-size: 32px;
+  color: var(--colorWhite);
+}
+
+.navbar .tabs {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+.navbar .tabs ul {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--colorBlue);
+  padding: 32px;
+  color: white;
+}
+
+.banner .banner-text {
+  width: 50%;
+  padding: 128px;
+}
+
+.banner .banner-text h1 {
+  margin: 16px 0 16px 0;
+}
+
+.banner .banner-text p {
+  margin: 16px 0 16px 0;
+}
+
+.banner .banner-text button {
+  border-radius: 20px;
+  padding: 12px;
+  border: 1px solid #fff;
+  color: var(--colorWhite);
+}
+
+.banner .banner-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120%;
+}
+
+.banner .banner-image img {
+  width: 50%;
+}
+
+main {
+  padding: 16px;
+}
+
+main h1 {
+  text-align: center;
+  color: var(--colorBlue);
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 16px;
+  padding: 32px;
+}
+
+.cards div {
+  padding: 16px;
+}
+
+.cards div i {
+  padding: 16px;
+  font-size: 48px;
+}
+
+.cards a {
+  color: rgb(60, 60, 60);
+}
+
+.marketing {
+  background-color: rgb(235, 105, 105);
+}
+
+.design {
+  background-color: rgb(253, 253, 121);
+}
+
+.research {
+  background-color: rgb(118, 144, 220);
+}
+
+.branding {
+  background-color: rgb(160, 160, 160);
+}
+
+.footbar {
+  width: 100%;
+  color: var(--colorWhite);
+  background-color: var(--colorBlue);
+  padding: 32px;
+}
+
+.footbar a {
+  color: yellow;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .navbar .title-page {
+    width: 60%;
+  }
+
+  .navbar .tabs {
+    width: 40%;
+    position: relative;
+  }
+  .navbar .tabs ul {
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-color: var(--colorBlue);
+    border: 2px solid black;
+    position: absolute;
+    top: 42px;
+    left: calc(50% - 50px);
+  }
+
+  .navbar button {
+    display: block;
+    cursor: pointer;
+  }
+
+  nav:hover .tabs ul {
+    cursor: pointer;
+    display: grid;
+  }
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner .banner-text {
+    width: 100%;
+    padding: 32px;
+  }
+
+  .banner .banner-image {
+    width: 100%;
+    padding: 32px;
+  }
+
+  .banner .banner-image img {
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .navbar .title-page {
+    width: 60%;
+  }
+
+  .navbar .tabs {
+    width: 40%;
+    position: relative;
+  }
+  .navbar .tabs ul {
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-color: var(--colorBlue);
+    border: 2px solid black;
+    position: absolute;
+    top: 42px;
+    left: calc(50% - 50px);
+  }
+
+  .navbar button {
+    display: block;
+    cursor: pointer;
+  }
+
+  nav:hover .tabs ul {
+    cursor: pointer;
+    display: grid;
+  }
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner .banner-text {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .banner .banner-image {
+    width: 100%;
+    padding: 32px;
+  }
+
+  .banner .banner-image img {
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: auto;
+    padding: 16px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .banner .banner-text {
+    padding: 64px;
+  }
+
+  .banner .banner-image img {
+    width: 60%;
+  }
+}
